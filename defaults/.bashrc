@@ -1,14 +1,17 @@
 ## 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
-# Show screenfetch
-neofetch
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
+
+# Show screenfetch
+neofetch
+
+# Set 256 colors support
+TERM=xterm-256color
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
