@@ -1,10 +1,14 @@
 # Site settings
 title: Debian Quickstart
 tag_text: Debian Quickstart
-description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
+description: Sane defaults for the twenty-first century.
 
 # Build settings
+highlighter: rouge
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 exclude: ["README.md"]
 sass:
   style: compressed
