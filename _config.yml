@@ -1,6 +1,6 @@
 # Site settings
-title: Solo, a Jekyll Theme
-tag_text: debian-quickstart
+title: Debian Quickstart
+tag_text: Debian Quickstart
 description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
 
 # Build settings

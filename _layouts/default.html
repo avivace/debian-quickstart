@@ -10,10 +10,16 @@
 {% include head.html %}
 </head>
 <body>
+  <center><h1><a href="./">{{ site.tag_text }}</a></h1>
+    <p id="joke" style="margin-top: -2.5rem; font-family:'Libre Baskerville'; font-weight: 400; font-style: italic;">Sane defaults for the twenty-first century</i></p></center>
   <div class="container">
-    <h1><a href="./">{{ site.tag_text }}</a></h1>
+    
     {{ content }}
+    <br>
+
   </div>
+  <br>
+  <center><p style="font-size:0.8em; font-family: 'Libre Baskerville', sans-serif; font-style: italic;">A kinda footer</p></center>
 {% include scripts.html %}
 </body>
 </html>

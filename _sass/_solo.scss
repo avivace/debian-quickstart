@@ -1,7 +1,8 @@
 @import url(//fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:700);
 
 html {
-  font: 16px/1.5 Inconsolata, sans-serif;
+  font: 14px/1.25 'Asap', sans-serif;
+
 }
 
 @media (min-width: 30rem) {
@@ -13,11 +14,12 @@ html {
 body {
   margin: 2rem 0 5rem;
   color: #333;
+  background-color: #f2f1ed;
 }
 
 @media (min-width: 30rem) {
   body {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 }
 
@@ -27,20 +29,24 @@ a {
 }
 
 a:hover, a:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Montserrat, sans-serif;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: 700 !important;
   margin: 0 0 0.5rem -0.1rem /* align left edge */;
-  line-height: 1;
+  line-height: 1.5;
   color: #111;
   text-rendering: optimizeLegibility;
+  
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-weight: normal;
+  line-height: 1;
 }
 
 @media (min-width: 30rem) {
@@ -58,6 +64,7 @@ h2 {
   margin-top: 2rem;
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
+
 }
 
 @media (min-width: 30rem) {
@@ -128,7 +135,8 @@ td, th {
 }
 
 pre, code {
-  font-family: inherit;
+  font-family: 'Hack', monospace;
+  font-size: 0.9rem;
   background-color: #eee;
 }
 
@@ -146,7 +154,8 @@ pre > code {
 }
 
 .container {
-  max-width: 30rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding: 0 1rem;
+  background-color: #faf9f5;
 }
