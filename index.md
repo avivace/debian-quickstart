@@ -99,7 +99,7 @@ Running this commands will automatically download and apply them for you:
 sudo wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/.rootbashrc -O ~/root/.bashrc
 wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/.bashrc -O ~/.bashrc
 wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/.fonts.conf -O ~/.fonts.conf
-wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/.tmux.conf -O ~/.fonts.conf
+wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/.tmux.conf -O ~/.tmux.conf
 ```
 
 Additionaly, `apt install apt-listbugs apt-listchanges` in order to be made aware of grave bugs or important changes when you install new packages or during an upgrade.
