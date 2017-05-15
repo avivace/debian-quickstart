@@ -44,7 +44,7 @@ This part should be easy if you ever installed a Linux distro, but you can take 
 ## Upgrade to testing
 You should now be logged in your shiny new Debian. Open a terminal (the actual name depends on the Desktop Environment you chose, it's *Konsole* on KDE, *MATE Terminal* on MATE, ...) and start typing these things.
 
-> You may now want to install the browser ([firefox](#firefox) or [chromium](#chromium), so you can copy-paste your way into debian from this page.
+> You may now want to use a browser (firefox is preinstalled), to copy-paste your way from this page easily.
 
 
 Give yourself sudo (replace "\<username>" with your username).
@@ -98,7 +98,7 @@ sudo apt install -t experimental firefox
 
 Some standard utilities, fonts, a firewall:
 ```powershell
-apt install wget vim-nox git curl pk-update-icon apt-transport-https gdebi build-essential linux-headers-$(uname -r) fonts-freefont-otf otf-freefont fonts-hack-otf ttf-mscorefonts-installer ttf-bitstream-vera ttf-dejavu ttf-liberation fonts-octicons ufw gufw tlp neofetch tmux
+sudo apt install wget vim-nox git curl pk-update-icon apt-transport-https gdebi build-essential linux-headers-$(uname -r) fonts-freefont-otf otf-freefont fonts-hack-otf ttf-mscorefonts-installer ttf-bitstream-vera ttf-dejavu ttf-liberation fonts-octicons ufw gufw tlp neofetch tmux
 ```
 
 Now we will apply some default configurations files
@@ -117,9 +117,9 @@ wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults
 
 Additionaly, `apt install apt-listbugs apt-listchanges` in order to be made aware of grave bugs or important changes when you install new packages or during an upgrade.
 
-## We did it.
-
-> Enjoy the feeling of running a beautiful, powerful computer maintained by a global community of dedicated, passionate people that believe in a world of free software.
+## We did it
+<center>
+<blockquote><i><p style="font-family: 'Libre Baskerville' "> Enjoy the feeling of running a beautiful, powerful computer maintained by a global community of dedicated, passionate people that believe in a world of free software.</p></i> </blockquote></center>
 
 ## Community & further readings
 You're now on your own. Or not. There are plenty of places to ask for help and learn a lot about debian:
