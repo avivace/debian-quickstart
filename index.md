@@ -30,7 +30,7 @@ sudo dd if=debian.iso of=/dev/sdX
 ```
 Assuming `debian.iso` is our downloaded file and `sdX` is your USB key.
 
-If you downloaded the DVD ISO in the previous phase, extract [firmware.zip](https://cdimage.debian.org/cdimage/unofficial/non-free/firmware/stable/current/) file into the `firmware` folder of the USB key.
+If you downloaded the DVD ISO in the previous phase, extract [firmware.zip](https://cdimage.debian.org/cdimage/unofficial/non-free/firmware/stable/current/) file into another USB key and insert it during the next step if the installer asks for additional drivers.
 
 Now **reboot**, disable Secure Boot in BIOS settings and select the USB key as boot device.
 
