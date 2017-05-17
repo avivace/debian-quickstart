@@ -19,7 +19,14 @@ Even if we plan to install the testing version, we start by installing the stabl
 
 [firmware-x.x.x-amd64-netinst.iso](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/?C=S;O=D)
 
-If you can't access the network during the install, download the DVD ISO, [debian-x.x.x-amd64-DVD-1.iso](https://cdimage.debian.org/cdimage/release/current/amd64/iso-dvd/).
+If you can't access the network during the install, download one on [these](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/) DVD ISO images, depending on your favorite Desktop Environment:
+
+- [Cinnamon](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-cinnamon-desktop+nonfree.iso)
+- [Gnome](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-gnome-desktop+nonfree.iso)
+- [KDE](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-kde-desktop+nonfree.iso)
+- [lxde](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-lxde-desktop+nonfree.iso)
+- [MATE](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-mate-desktop+nonfree.iso)
+- [xfce](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-xfce-desktop+nonfree.iso)
 
 ### Bootable USB key
 On Windows, use [win32diskimager](http://sf.net/projects/win32diskimager/).
@@ -29,8 +36,6 @@ On Linux, run
 sudo dd if=debian.iso of=/dev/sdX
 ```
 Assuming `debian.iso` is our downloaded file and `sdX` is your USB key.
-
-If you downloaded the DVD ISO in the previous phase, extract [firmware.zip](https://cdimage.debian.org/cdimage/unofficial/non-free/firmware/stable/current/) file into another USB key and insert it during the next step if the installer asks for additional drivers.
 
 Now **reboot**, disable Secure Boot in BIOS settings and select the USB key as boot device.
 
@@ -73,9 +78,8 @@ sudo apt autoremove -y
 This can take a while, depending on your connection speed.
 
 ### VirtualBox Guest Additions
-If you're trying things on a Virtual Machine, mount the Guest Addition drive from the menu and run:
+If you're trying things on a Virtual Machine, mount the Guest Addition drive from the menu and run `cp /media/<CDROM>/* vbox/ -r` (replace <CDROM> with the correct drive, should be `cdrom0` or `cdrom`), then:
 ```
-cp /media/cdrom0/* vbox/ -r
 sudo apt install build-essential dkms linux-headers-$(uname -r) -y
 sudo ./vbox/VBoxLinuxAdditions.run
 sudo rm -rf vbox
