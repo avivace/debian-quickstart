@@ -15,18 +15,11 @@ You may want to try things on a Virtual Machine, first.
 
 ## Prepare the installation
 ### Which ISO?
-Even if we plan to install the testing version, we start by installing the stable, and later upgrade.
+We will start by installing debian stable, and later upgrade if you need more recent package versions.
 
-[firmware-x.x.x-amd64-netinst.iso](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/?C=S;O=D)
+[firmware-9.0.0-amd64-netinst.iso](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/firmware-9.0.0-amd64-netinst.iso)
 
-If you can't access the network during the install, download one on [these](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/) DVD ISO images, depending on your favorite Desktop Environment:
-
-- [Cinnamon](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-cinnamon-desktop+nonfree.iso)
-- [Gnome](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-gnome-desktop+nonfree.iso)
-- [KDE](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-kde-desktop+nonfree.iso)
-- [lxde](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-lxde-desktop+nonfree.iso)
-- [MATE](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-mate-desktop+nonfree.iso)
-- [xfce](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/8.8.0-live+nonfree/amd64/iso-hybrid/debian-live-8.8.0-amd64-xfce-desktop+nonfree.iso)
+If you can't access the network during the install, download [this](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-dvd/firmware-9.0.0-amd64-DVD-1.iso) image instead.
 
 ### Bootable USB key
 On Windows, use [win32diskimager](http://sf.net/projects/win32diskimager/).
@@ -47,10 +40,13 @@ This part should be easy if you ever installed a Linux distro, but you can take 
 - [Debian Linux Desktop](https://wiki.comprofix.com/index.php?title=Debian_Linux_Desktop#Installation)
 
 ## Upgrade to testing
+If you don't have particular needs, you can skip this step: the stable version is pretty new and has relatively recent package versions.
+
+Upgrading to testing will give more bleeding edge software and recent versions.
+
 You should now be logged in your shiny new Debian. Open a terminal (the actual name depends on the Desktop Environment you chose, it's *Konsole* on KDE, *MATE Terminal* on MATE, ...) and start typing these things.
 
 > You may now want to use a browser (firefox is preinstalled), to copy-paste your way from this page easily.
-
 
 Give yourself sudo (replace "\<username>" with your username).
 ```powershell
@@ -78,7 +74,7 @@ sudo apt autoremove -y
 This can take a while, depending on your connection speed.
 
 ### VirtualBox Guest Additions
-If you're trying things on a Virtual Machine, mount the Guest Addition drive from the menu and run `cp /media/<CDROM>/* vbox/ -r` (replace <CDROM> with the correct drive, should be `cdrom0` or `cdrom`), then:
+If you're trying things on a Virtual Machine, mount the Guest Addition drive from the menu and run `mkdir vbox && cp /media/<CDROM>/* vbox/ -r` (replace <CDROM> with the correct drive, should be `cdrom0` or `cdrom`), then:
 ```
 sudo apt install build-essential dkms linux-headers-$(uname -r) -y
 sudo ./vbox/VBoxLinuxAdditions.run
@@ -102,7 +98,7 @@ sudo apt install -t experimental firefox
 
 Some standard utilities, fonts, a firewall:
 ```powershell
-sudo apt install wget vim-nox git curl pk-update-icon apt-transport-https gdebi build-essential linux-headers-$(uname -r) fonts-freefont-otf otf-freefont fonts-hack-otf ttf-mscorefonts-installer ttf-bitstream-vera ttf-dejavu ttf-liberation fonts-octicons ufw gufw tlp neofetch tmux
+sudo apt install wget vim-nox git curl pk-update-icon apt-transport-https gdebi build-essential linux-headers-$(uname -r) fonts-freefont-otf otf-freefont fonts-hack-otf ttf-mscorefonts-installer ttf-bitstream-vera ttf-dejavu ttf-liberation fonts-octicons ufw gufw tlp neofetch tmux debian-keyring
 ```
 
 Now we will apply some default configurations files
