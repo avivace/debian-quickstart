@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 ## Preamble
 This project aims to provide a rolling Debian environment featuring recent packages, stability and confortable defaults for casual users, developers and geeks.
 
@@ -14,7 +15,7 @@ Every type of feedback, comment or suggestion is welcome, please **do contribute
 You may want to try things on a Virtual Machine, first.
 
 ## Prepare the installation
-### Which ISO?
+### Download the ISO
 We will start by installing debian stable, and later upgrade if you need more recent package versions.
 
 [firmware-9.0.0-amd64-netinst.iso](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/firmware-9.0.0-amd64-netinst.iso)
@@ -40,13 +41,10 @@ This part should be easy if you ever installed a Linux distro, but you can take 
 - [Debian Linux Desktop](https://wiki.comprofix.com/index.php?title=Debian_Linux_Desktop#Installation)
 
 ## Upgrade to testing
-If you don't have particular needs, you can skip this step: the stable version is pretty new and has relatively recent package versions.
 
-Upgrading to testing will give more bleeding edge software and recent versions.
+> Upgrading to testing will give more bleeding edge software and recent versions. Testing is generally very stable - compared to other distributions - and rarely breaks. E.g. Ubuntu is based on Debian unstable and its LTS version on Debian testing. Anyway, reading [What are some best practices for testing/sid users?](https://wiki.debian.org/ DebianUnstable#What_are_some_best_practices_for_testing.2Fsid_users.3F) will give some useful general informations.
 
 You should now be logged in your shiny new Debian. Open a terminal (the actual name depends on the Desktop Environment you chose, it's *Konsole* on KDE, *MATE Terminal* on MATE, ...) and start typing these things.
-
-> You may now want to use a browser (firefox is preinstalled), to copy-paste your way from this page easily.
 
 Give yourself sudo (replace "\<username>" with your username).
 ```powershell
@@ -107,7 +105,7 @@ Now we will apply some default configurations files
 - [.fonts.config](https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/.fonts.conf)
 - [tmux](https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/.tmux.conf)
 
-Running this commands will automatically download and apply them for you:
+Running these commands will automatically download and apply them for you:
 ```powershell
 sudo wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/.rootbashrc -O ~/root/.bashrc
 wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/.bashrc -O ~/.bashrc
@@ -120,6 +118,13 @@ Additionaly, `apt install apt-listbugs apt-listchanges` in order to be made awar
 ## We did it
 <center>
 <blockquote><i><p style="font-family: 'Libre Baskerville' "> Enjoy the feeling of running a beautiful, powerful computer maintained by a global community of dedicated, passionate people that believe in a world of free software.</p></i> </blockquote></center>
+
+## FAQ
+### Debian releases
+> Is *jessie* the stable? If I have "stable" in my sources.list what distro am I tracking?
+
+Read [SourcesList](https://wiki.debian.org/SourcesList) and [DebianReleases](https://wiki.debian.org/DebianReleases).
+
 
 ## Community & further readings
 You're now on your own. Or not. There are plenty of places to ask for help and learn a lot about debian:

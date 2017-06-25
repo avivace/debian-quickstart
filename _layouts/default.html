@@ -8,11 +8,14 @@
   <title>{{ site.title }}</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
+<script src="https://use.fontawesome.com/0eaed8d23a.js"></script>
+
 {% include head.html %}
 </head>
 <body>
   <center><h1><a href="./">{{ site.tag_text }}</a></h1>
-    <p id="joke" style="font-family:'Libre Baskerville'; font-weight: 400; font-style: italic;">Sane defaults for the twenty-first century</i></p></center>
+    <p id="joke" style="font-family:'Libre Baskerville'; font-weight: 400; font-style: italic;">Sane defaults for the twenty-first century <a class="cat" href="https://github.com/avivace/debian-quickstart"> <i class="fa fa-github" aria-hidden="true"></i></a> </p></center>
   <div class="container">
     
     {{ content }}
@@ -20,7 +23,30 @@
 
   </div>
   <br>
-  <center><p style="font-size:0.8em; font-family: 'Libre Baskerville', sans-serif; font-style: italic;">Some kind of footer</p></center>
+  <center><p style="font-size:0.8em; font-family: 'Libre Baskerville', sans-serif; font-style: italic;"></p></center>
+  <div class="comments" id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    var disqus_config = function () {
+        this.page.url = "https://avivace.github.io/debian-quickstart/";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://avivace.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 {% include scripts.html %}
 </body>
 </html>
