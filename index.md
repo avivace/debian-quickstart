@@ -121,7 +121,7 @@ Additionaly, `apt install apt-listbugs apt-listchanges` in order to be made awar
 
 ## FAQ
 ### Debian releases
-> Is *jessie* the stable? If I have "stable" in my sources.list what distro am I tracking?
+> Is *jessie* the stable? If I have "stable" in my sources.list what release am I tracking?
 
 Read [SourcesList](https://wiki.debian.org/SourcesList) and [DebianReleases](https://wiki.debian.org/DebianReleases).
 
@@ -140,3 +140,6 @@ You're now on your own. Or not. There are plenty of places to ask for help and l
 - [/r/debian](https://www.reddit.com/r/debian)
 - [Official Debian GNU/Linux Installation Guide](https://www.debian.org/releases/stable/amd64/ch06s03.html.en#di-setup)
 - [Installation Notes](https://github.com/konklone/debian/blob/master/installing.md#installing-debian)
+
+### Related links
+- [SparkyLinux](https://sparkylinux.org/) A distro based on the testing branch of debian, providing a rolling release and a repository of additional applications.
