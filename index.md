@@ -62,6 +62,7 @@ Run
 ```powershell
 sudo rm /etc/apt/sources.list
 sudo wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/sources.list -O /etc/apt/sources.list
+sudo wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults/preferences -O /etc/apt/preferences
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt full-upgrade -y
@@ -80,17 +81,6 @@ sudo rm -rf vbox
 sudo reboot
 ```
 Otherwise, ignore this step.
-
-### Chromium
-```
-sudo apt install chromium chromium-l10n chromium-widevine
-```
-
-### Firefox
-```
-sudo echo "deb http://deb.debian.org/debian/ experimental main" >> /etc/apt/sources.list
-sudo apt install -t experimental firefox
-```
 
 ## Human defaults
 
@@ -114,6 +104,17 @@ wget https://raw.githubusercontent.com/avivace/debian-quickstart/master/defaults
 ```
 
 Additionaly, `apt install apt-listbugs apt-listchanges` in order to be made aware of grave bugs or important changes when you install new packages or during an upgrade.
+
+### Chromium
+```
+sudo apt install chromium chromium-l10n chromium-widevine
+```
+
+### Firefox
+```
+sudo apt install firefox
+```
+
 
 ## We did it
 <center>
