@@ -12,15 +12,50 @@ Every type of feedback, comment or suggestion is welcome, please **do contribute
 
 > A big and exciting part of using a Linux environment is about learning, going mad because everything broke and learning more by fixing things. Blindly copy-pasting will make things way worse later on, so \*pretty please\* take a moment to review what we are doing in every step and check the configuration files we are applying, knowledge is just one query away.
 
-You may want to try things on a Virtual Machine, first.
+There are some important concept and practices you should be aware of:
+
+### Debian testing is not stable
+
+We will be on debian **testing** which is basically another distribution, compared to the stable release.
+
+Being on debian testing will give more bleeding edge software and recent versions. Testing is generally very stable - compared to other distributions - and rarely breaks. E.g. Ubuntu is based on Debian unstable and its LTS version on Debian testing. Anyway, reading [What are some best practices for testing/sid users?](https://wiki.debian.org/ DebianUnstable#What_are_some_best_practices_for_testing.2Fsid_users.3F) will give some useful general informations.
+
+### APT Pinning
+A very common practice allowing the mixing of sources and repositories on Debian. In this page we will add `testing` and `unstable` repositories in the APT sources but we will give more priority to the `testing` one, meaning we will install and upgrade everything from that, and only for specific packages (or not available in the `testing` one) apt will consider the `unstable` source.
+Firefox stable is available only on the `unstable` distribution, so we pinned the firefox package to that source.
+
+In the "Upgrade to testing" paragraph, check the `sources.list` and `preferences` file we are applying to get this result.
+
+- [A short introduction to APT pinning](https://www.howtoforge.com/a-short-introduction-to-apt-pinning)
+- [APT pinning for beginners](http://jaqque.sbih.org/kplug/apt-pinning.html)
+
+
+### --only-upgrade
+```
+apt-get install --only-upgrade <packagename>
+```
+This command will upgrade only that single package - if it is installed - and won't install any other package.
+
 
 ## Prepare the installation
+You may want to try things on a Virtual Machine, first.
+
 ### Download the ISO
 We will start by installing debian stable, and later upgrade if you need more recent package versions.
 
 [firmware-9.0.0-amd64-netinst.iso](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/firmware-9.0.0-amd64-netinst.iso)
 
 If you can't access the network during the install, download [this](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-dvd/firmware-9.0.0-amd64-DVD-1.iso) image instead.
+
+> Debian has these divisions:
+> 
+> 1) main: All free software that follows the DFSG ([Debian Free Software Guidelines](https://en.wikipedia.org/wiki/Debian_Free_Software_Guidelines))
+>
+>2) contrib: Free software that follows DFSG but depends on software in non-free.
+>
+>3) non-free: All kinds of non-free software that doesn't follow the DFSG.
+>
+>We are using the unofficial "non-free" ISO of debian, which includes non-free  and contrib software and guarantees compatibility with a lot of hardware. 
 
 ### Bootable USB key
 On Windows, use [win32diskimager](http://sf.net/projects/win32diskimager/).
@@ -41,8 +76,6 @@ This part should be easy if you ever installed a Linux distro, but you can take 
 - [Debian Linux Desktop](https://wiki.comprofix.com/index.php?title=Debian_Linux_Desktop#Installation)
 
 ## Upgrade to testing
-
-> Upgrading to testing will give more bleeding edge software and recent versions. Testing is generally very stable - compared to other distributions - and rarely breaks. E.g. Ubuntu is based on Debian unstable and its LTS version on Debian testing. Anyway, reading [What are some best practices for testing/sid users?](https://wiki.debian.org/ DebianUnstable#What_are_some_best_practices_for_testing.2Fsid_users.3F) will give some useful general informations.
 
 You should now be logged in your shiny new Debian. Open a terminal (the actual name depends on the Desktop Environment you chose, it's *Konsole* on KDE, *MATE Terminal* on MATE, ...) and start typing these things.
 
