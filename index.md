@@ -41,7 +41,7 @@ We will be on debian **testing** which is basically another distribution, compar
 
 Being on debian testing will give more bleeding edge software and recent versions. Testing is generally very stable - compared to other distributions - and rarely breaks. E.g. Ubuntu is based on Debian unstable and its LTS version on Debian testing. Anyway, reading [What are some best practices for testing/sid users?](https://wiki.debian.org/ DebianUnstable#What_are_some_best_practices_for_testing.2Fsid_users.3F) will give some useful general informations.
 
-You should also pay attention running `apt full-upgrade` on testing and unstable, because during migrations or major upgrades, a lot of packages maybe unistalled, leaving you with a broken system. Always read what `apt` wants to to, before confirming.
+You should also pay attention running `apt full-upgrade` on testing and unstable, because during migrations or major upgrades, a lot of packages maybe unistalled, leaving you with a broken system. Always read what `apt` wants to do, before confirming.
 
 ### APT Pinning
 A very common practice allowing the mixing of sources and repositories on Debian. In this page we will add `testing` and `unstable` repositories in the APT sources but we will give more priority to the `testing` one, meaning we will install and upgrade everything from that, and only for specific packages (or not available in the `testing` one) apt will consider the `unstable` source.
