@@ -14,11 +14,34 @@ Every type of feedback, comment or suggestion is welcome, please **do contribute
 
 There are some important concept and practices you should be aware of:
 
+### Debian releases and versions
+
+#### Stable
+The "stable" distribution contains the latest officially released distribution of Debian.
+
+The current "stable" distribution of Debian is version 9, codenamed `stretch`.
+
+#### Testing
+
+The "testing" distribution contains packages that haven't been accepted into a "stable" release yet, but they are in the queue for that. The main advantage of using this distribution is that it has more recent versions of software.
+
+The current "testing" distribution is `buster`.
+
+#### Unstable
+
+The "unstable" distribution is where active development of Debian occurs. Generally, this distribution is run by developers and those who like to live on the edge.
+
+The "unstable" distribution is always called sid.
+
+Please note that "unstable" refers to the versions of the software shipped, not to the stability of the distribution itself.
+
 ### Debian testing is not stable
 
 We will be on debian **testing** which is basically another distribution, compared to the stable release.
 
 Being on debian testing will give more bleeding edge software and recent versions. Testing is generally very stable - compared to other distributions - and rarely breaks. E.g. Ubuntu is based on Debian unstable and its LTS version on Debian testing. Anyway, reading [What are some best practices for testing/sid users?](https://wiki.debian.org/ DebianUnstable#What_are_some_best_practices_for_testing.2Fsid_users.3F) will give some useful general informations.
+
+You should also pay attention running `apt full-upgrade` on testing and unstable, because during migrations or major upgrades, a lot of packages maybe unistalled, leaving you with a broken system. Always read what `apt` wants to to, before confirming.
 
 ### APT Pinning
 A very common practice allowing the mixing of sources and repositories on Debian. In this page we will add `testing` and `unstable` repositories in the APT sources but we will give more priority to the `testing` one, meaning we will install and upgrade everything from that, and only for specific packages (or not available in the `testing` one) apt will consider the `unstable` source.
@@ -47,7 +70,7 @@ We will start by installing debian stable, and later upgrade if you need more re
 
 If you can't access the network during the install, download [this](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-dvd/firmware-9.0.0-amd64-DVD-1.iso) image instead.
 
-> Debian has these divisions:
+> Debian has these divisions in the repositories:
 > 
 > 1) main: All free software that follows the DFSG ([Debian Free Software Guidelines](https://en.wikipedia.org/wiki/Debian_Free_Software_Guidelines))
 >
@@ -175,5 +198,7 @@ You're now on your own. Or not. There are plenty of places to ask for help and l
 - [Official Debian GNU/Linux Installation Guide](https://www.debian.org/releases/stable/amd64/ch06s03.html.en#di-setup)
 - [Installation Notes](https://github.com/konklone/debian/blob/master/installing.md#installing-debian)
 
-### Related links
+### Related distributions
+These supported distributions are based on Debian and provide updated software out of box:
+
 - [SparkyLinux](https://sparkylinux.org/) A distro based on the testing branch of debian, providing a rolling release and a repository of additional applications.
