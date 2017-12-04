@@ -12,6 +12,8 @@ Every type of feedback, comment or suggestion is welcome, please **do contribute
 
 > A big and exciting part of using a Linux environment is about learning, going mad because everything broke and learning more by fixing things. Blindly copy-pasting will make things way worse later on, so \*pretty please\* take a moment to review what we are doing in every step and check the configuration files we are applying, knowledge is just one query away.
 
+If you are in a hurry, skip to the [Prepare the installation](prepare-the-installation) paragraph.
+
 There are some important concept and practices you should be aware of:
 
 ### Debian releases and versions
@@ -41,7 +43,7 @@ We will be on debian **testing** which is basically another distribution, compar
 
 Being on debian testing will give more bleeding edge software and recent versions. Testing is generally very stable - compared to other distributions - and rarely breaks. E.g. Ubuntu is based on Debian unstable and its LTS version on Debian testing. Anyway, reading [What are some best practices for testing/sid users?](https://wiki.debian.org/ DebianUnstable#What_are_some_best_practices_for_testing.2Fsid_users.3F) will give some useful general informations.
 
-You should also pay attention running `apt full-upgrade` on testing and unstable, because during migrations or major upgrades, a lot of packages maybe unistalled, leaving you with a broken system. Always read what `apt` wants to do, before confirming.
+You should also pay attention running `apt full-upgrade` on testing and unstable, because during migrations or major upgrades, a lot of packages maybe unistalled, leaving you with a broken system. **Always read what `apt` wants to do, before confirming**.
 
 ### APT Pinning
 A very common practice allowing the mixing of sources and repositories on Debian. In this page we will add `testing` and `unstable` repositories in the APT sources but we will give more priority to the `testing` one, meaning we will install and upgrade everything from that, and only for specific packages (or not available in the `testing` one) apt will consider the `unstable` source.
