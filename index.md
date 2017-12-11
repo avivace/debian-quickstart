@@ -12,7 +12,7 @@ Every type of feedback, comment or suggestion is welcome, please **do contribute
 
 > A big and exciting part of using a Linux environment is about learning, going mad because everything broke and learning more by fixing things. Blindly copy-pasting will make things way worse later on, so \*pretty please\* take a moment to review what we are doing in every step and check the configuration files we are applying, knowledge is just one query away.
 
-If you are in a hurry, skip to the [Prepare the installation](prepare-the-installation) paragraph.
+If you are in a hurry, skip to the [Prepare the installation](#prepare-the-installation) paragraph.
 
 There are some important concept and practices you should be aware of:
 
