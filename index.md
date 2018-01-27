@@ -188,12 +188,13 @@ Read [SourcesList](https://wiki.debian.org/SourcesList) and [DebianReleases](htt
 ## Community & further readings
 You're now on your own. Or not. There are plenty of places to ask for help and learn a lot about debian:
 
-- [Debian irc](https://wiki.debian.org/GettingHelpOnIrc)
+- [Debian IRC](https://wiki.debian.org/GettingHelpOnIrc)
 - [Debian subreddit](https://reddit.com/r/debian)
 - [Stack Exchange tag "debian"](https://unix.stackexchange.com/questions/tagged/debian)
 - [Don't break debian](https://wiki.debian.org/DontBreakDebian)
 - [DebianTesting](https://wiki.debian.org/DebianTesting)
 - [Debian Wiki](https://wiki.debian.org/)
+- [How To Fix FrankenDebian](https://gist.github.com/christianbundy/0d982648cbfe3dd4350cee8ab9e53828)
 
 ### Sources
 - [/r/debian](https://www.reddit.com/r/debian)
