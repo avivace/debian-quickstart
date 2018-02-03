@@ -68,9 +68,9 @@ You may want to try things on a Virtual Machine, first.
 ### Download the ISO
 We will start by installing debian stable, and later upgrade if you need more recent package versions.
 
-[firmware-9.2.0-amd64-netinst.iso](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/firmware-9.2.1-amd64-netinst.iso)
+Download the iso image [here](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/).
 
-If you can't access the network during the install, download [this](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-dvd/firmware-9.0.0-amd64-DVD-1.iso) image instead.
+If you can't access the network during the install, download the DVD iso [here](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-dvd/).
 
 > Debian has these divisions in the repositories:
 > 
